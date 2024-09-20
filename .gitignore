@@ -1,0 +1,44 @@
+# Local Terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Sensitive Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# Crash logs
+crash.log
+crash.*
+
+# Terraform plan files
+*.tfplan
+
+# Override files (used for local configurations)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform providers
+.terraformrc
+.terraform.d/
+
+# Sensitive environment files
+.env
+.env.*
+
+# SSH keys and sensitive files
+**/id_ed25519*
+*.pem
+*.key
+*.crt
+**/kubeconf*
+
+# temp files
+*.swp
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
