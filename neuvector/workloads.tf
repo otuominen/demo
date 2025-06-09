@@ -18,7 +18,7 @@ resource "rancher2_app_v2" "kali-linux" {
   depends_on = [rancher2_cluster_sync.catalog-repo-sync]
   cluster_id = rancher2_cluster.rancher-cluster.id
   name = "kali"
-  namespace = "demo-apps"
+  namespace = "kali"
   repo_name = "demo-apps"
   chart_name = "kali-linux"
 }

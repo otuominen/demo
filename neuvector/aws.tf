@@ -32,7 +32,7 @@ resource "aws_instance" "rke2_master_instance" {
   vpc_security_group_ids = [aws_security_group.nvdemo_sg_allowall.id]
 
   root_block_device {
-    volume_size = 16
+    volume_size = 32
   }
 
   provisioner "remote-exec" {

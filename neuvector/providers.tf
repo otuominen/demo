@@ -2,15 +2,15 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.68.0"
+      version = "5.99.0"
     }
     local = {
       source  = "hashicorp/local"
-      version = "2.5.2"
+      version = "2.5.3"
     }
     tls = {
       source  = "hashicorp/tls"
-      version = "4.0.6"
+      version = "4.1.0"
     }
     ssh = {
       source  = "loafoe/ssh"
@@ -18,11 +18,11 @@ terraform {
     }
     rancher2 = {
       source  = "rancher/rancher2"
-      version = "5.0.0"
+      version = "7.0.0"
     }
     random = {
       source = "hashicorp/random"
-      version = "3.6.3"
+      version = "3.7.2"
     }
   }
   required_version = ">= 1.0.0"
