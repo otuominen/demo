@@ -2,9 +2,9 @@ frontend:
   replicas: 3
 
 redis:
-  master:
+  leader:
     replicas: 1
-  replica:
+  follower:
     replicas: 2
 
 ingress:
