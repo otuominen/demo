@@ -20,7 +20,7 @@ controller:
     enabled: true
     data:
       sysinitcfg.yaml:
-        Cluster_Name: demo
+        Cluster_Name: SUSE Security Demo
       userinitcfg.yaml:
         users:
         - Fullname: admin

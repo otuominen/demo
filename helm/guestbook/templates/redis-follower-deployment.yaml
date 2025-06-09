@@ -27,7 +27,7 @@ spec:
         - name: GET_HOSTS_FROM
           value: env
         - name: REDIS_LEADER_SERVICE_HOST
-          value: {{ .Release.Name }}-redis-master
+          value: {{ .Release.Name }}-redis-leader
         - name: REDIS_FOLLOWER_SERVICE_HOST
           value: {{ .Release.Name }}-redis-follower
         ports:

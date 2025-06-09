@@ -24,10 +24,10 @@ spec:
         env:
         - name: GET_HOSTS_FROM
           value: env
-        - name: REDIS_MASTER_SERVICE_HOST
-          value: {{ .Release.Name }}-redis-master
-        - name: REDIS_SLAVE_SERVICE_HOST
-          value: {{ .Release.Name }}-redis-replica
+        - name: REDIS_LEADER_SERVICE_HOST
+          value: {{ .Release.Name }}-redis-leader
+        - name: REDIS_FOLLOWER_SERVICE_HOST
+          value: {{ .Release.Name }}-redis-follower
 
         ports:
         - containerPort: 80
