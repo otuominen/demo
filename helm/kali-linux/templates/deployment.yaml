@@ -20,5 +20,5 @@ spec:
             cpu: 100m
             memory: 100Mi
         command: [ "/bin/bash", "-c", "--" ]
-        args: [ "apt-get update && apt-get install -y hping3; while true; do sleep 30; done;" ]
+        args: [ "apt-get update && apt-get install -y hping3 iputils-ping; while true; do sleep 30; done;" ]
 

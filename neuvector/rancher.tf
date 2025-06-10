@@ -35,5 +35,5 @@ resource "rancher2_cluster_sync" "catalog-repo-sync" {
   ]
   cluster_id = rancher2_cluster.rancher-cluster.id
   wait_catalogs = true
-  state_confirm = 1
+  state_confirm = 2
 }
