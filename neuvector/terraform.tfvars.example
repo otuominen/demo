@@ -48,7 +48,7 @@ rancher_secret_key = ""
 rke2_master_node_count = 1
 
 # rke2 Kubernetes version
-rke2_version = "v1.28.12+rke2r1"
+rke2_version = "v1.33.11+rke2r1"
 
 # Number of worker nodes in cluster
 rke2_worker_node_count = 0

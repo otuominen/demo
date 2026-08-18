@@ -96,7 +96,7 @@ resource "ssh_resource" "install_rke2_first_master" {
   user = local.node_username
   private_key = tls_private_key.ssh_key.private_key_pem
   commands = [
-    "sudo bash -c 'wget -qO- https://get.rke2.io | INSTALL_RKE2_VERSION=v1.28.12+rke2r1 sh -'",
+    "sudo bash -c 'wget -qO- https://get.rke2.io | INSTALL_RKE2_VERSION=${var.rke2_version} sh -'",
     "sudo systemctl enable rke2-server --now",
     "sleep 2m",
     "sudo /var/lib/rancher/rke2/bin/kubectl --kubeconfig /etc/rancher/rke2/rke2.yaml -n kube-system rollout status daemonset rke2-ingress-nginx-controller"
@@ -110,7 +110,7 @@ resource "ssh_resource" "install_rke2_master" {
   user = local.node_username
   private_key = tls_private_key.ssh_key.private_key_pem
   commands = [
-    "sudo bash -c 'wget -qO- https://get.rke2.io | INSTALL_RKE2_VERSION=v1.28.12+rke2r1 sh -'",
+    "sudo bash -c 'wget -qO- https://get.rke2.io | INSTALL_RKE2_VERSION=${var.rke2_version} sh -'",
     "sleep ${count.index}m",
     "sudo systemctl enable rke2-server --now"
   ]
@@ -127,7 +127,7 @@ resource "ssh_resource" "install_rke2_worker" {
   user = local.node_username
   private_key = tls_private_key.ssh_key.private_key_pem
   commands = [
-    "sudo bash -c 'wget -qO- https://get.rke2.ioo | INSTALL_RKE2_TYPE=\"agent\" INSTALL_RKE2_VERSION=${var.rke2_version} sh -'",
+    "sudo bash -c 'wget -qO- https://get.rke2.io | INSTALL_RKE2_TYPE=\"agent\" INSTALL_RKE2_VERSION=${var.rke2_version} sh -'",
     "sleep ${count.index}m",
     "sudo systemctl enable rke2-agent --now"
   ]
